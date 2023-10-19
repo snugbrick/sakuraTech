@@ -14,7 +14,6 @@ import org.m1arcleur.sakuratech.registerItem.ItemSakura.sakuraAtom;
  * @website github.com/snugbrick;
  */
 public class mainRegister {
-    
     public static void itemRegister() {
         URregister.registerItem("SAKURA_ATOM", sakuraAtom.SAKURA_ATOM, mainGroup.itemGroup,
                 RecipeType.COMPRESSOR, sakuraAtom.recipes);
