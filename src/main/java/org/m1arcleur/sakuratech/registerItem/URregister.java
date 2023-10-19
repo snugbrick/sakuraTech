@@ -1,6 +1,7 @@
 package org.m1arcleur.sakuratech.registerItem;
 
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun4.api.items.ItemHandler;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -13,9 +14,20 @@ import org.m1arcleur.sakuratech.SakuraTech;
  * @website github.com/snugbrick;
  */
 public class URregister {
-    public static void registerItem(String id, ItemStack itemStack, ItemGroup itemGroup, RecipeType recipeType, ItemStack[] recipe) {
+    public static void registerItem(String id, ItemStack itemStack, ItemGroup itemGroup, RecipeType recipeType,
+                                    ItemStack[] recipe) {
         SlimefunItemStack slimefunItemStack = new SlimefunItemStack(id, itemStack);
         SlimefunItem sli = new SlimefunItem(itemGroup, slimefunItemStack, recipeType, recipe);
+        sli.register(SakuraTech.getInstance());
+    }
+
+    public static void registerItem(String id, ItemStack itemStack, ItemGroup itemGroup, RecipeType recipeType,
+                                    ItemStack[] recipe, ItemHandler... itemHandlers) {
+        SlimefunItemStack slimefunItemStack = new SlimefunItemStack(id, itemStack);
+        SlimefunItem sli = new SlimefunItem(itemGroup, slimefunItemStack, recipeType, recipe);
+        for (ItemHandler ih : itemHandlers) {
+            sli.addItemHandler(ih);
+        }
         sli.register(SakuraTech.getInstance());
     }
 }

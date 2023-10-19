@@ -1,13 +1,19 @@
 package org.m1arcleur.sakuratech.registerItem;
 
+import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.api.researches.Research;
+import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
+import org.bukkit.Location;
 import org.bukkit.NamespacedKey;
 import org.m1arcleur.sakuratech.SakuraTech;
 import org.m1arcleur.sakuratech.regiaterGroup.mainGroup;
 import org.m1arcleur.sakuratech.registerItem.ItemSakura.sakuraAtom;
 import org.m1arcleur.sakuratech.registerItem.ItemSakura.sakuraAtomIngot;
+import org.m1arcleur.sakuratech.registerItem.notMainItem.DeathAtom;
+
+import java.util.Locale;
 
 /**
  * @author MiracleUR
@@ -31,5 +37,15 @@ public class mainRegister {
         research2.addItems(SlimefunItem.getByItem(sakuraAtomIngot.SAKURA_ATOM_INGOT));
         research2.register();
         //==============================================================================================================
+        URregister.registerItem("DEATH_ATOM", DeathAtom.deathAtom, mainGroup.itemGroup,
+                RecipeType.ENHANCED_CRAFTING_TABLE, DeathAtom.recipes, (ItemUseHandler) playerRightClickEvent -> {
+                    if (playerRightClickEvent.getItem().equals(DeathAtom.deathAtom)) {
+                        Location location = playerRightClickEvent.getPlayer().getLocation();
+                    }
+                });
+        Research research3 = new Research(new NamespacedKey(SakuraTech.getInstance(), "DEATH_ATOM"), 8003,
+                "凋亡粒子", 15);
+        research3.addItems(SlimefunItem.getByItem(DeathAtom.deathAtom));
+        research3.register();
     }
 }
