@@ -2,5 +2,5 @@ name: sakuraTech
 version: 1.0.0
 main: org.m1arcleur.sakuratech.SakuraTech
 api-version: '1.20'
-depend: [ Slimefun, CS-CoreLib ]
+depend: [ Slimefun ]
 authors: MiracleUR

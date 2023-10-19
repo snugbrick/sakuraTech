@@ -7,6 +7,7 @@ import org.bukkit.NamespacedKey;
 import org.m1arcleur.sakuratech.SakuraTech;
 import org.m1arcleur.sakuratech.regiaterGroup.mainGroup;
 import org.m1arcleur.sakuratech.registerItem.ItemSakura.sakuraAtom;
+import org.m1arcleur.sakuratech.registerItem.ItemSakura.sakuraAtomIngot;
 
 /**
  * @author MiracleUR
@@ -22,5 +23,13 @@ public class mainRegister {
                 "樱核原子", 10);
         research.addItems(SlimefunItem.getByItem(sakuraAtom.SAKURA_ATOM));
         research.register();
+        //==============================================================================================================
+        URregister.registerItem("SAKURA_ATOM_INGOT", sakuraAtomIngot.SAKURA_ATOM_INGOT, mainGroup.itemGroup,
+                RecipeType.ENHANCED_CRAFTING_TABLE, sakuraAtomIngot.recipes);
+        Research research2 = new Research(new NamespacedKey(SakuraTech.getInstance(), "SAKURA_ATOM_INGOT"), 8002,
+                "樱花锭", 20);
+        research2.addItems(SlimefunItem.getByItem(sakuraAtomIngot.SAKURA_ATOM_INGOT));
+        research2.register();
+        //==============================================================================================================
     }
 }
