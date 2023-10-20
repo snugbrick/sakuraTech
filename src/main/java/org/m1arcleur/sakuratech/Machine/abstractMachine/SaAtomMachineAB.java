@@ -35,12 +35,9 @@ public class SaAtomMachineAB  extends SlimefunItem implements InventoryBlock, En
     private static final int[] BORDER_A = {0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 25, 26,
             27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 44, 45, 46, 47, 48, 49, 50, 51, 41, 52, 53};
     private static final int[] BORDER_B = {37, 38, 39, 41, 42, 43};
-    private static final ItemStack FREE_STATE_ITEM = new CustomItem(Material.BLACK_STAINED_GLASS_PANE,""
-            );
-    private static final ItemStack BORDER_A_ITEM = new CustomItem(Material.LIGHT_BLUE_STAINED_GLASS_PANE,""
-            );
-    private static final ItemStack BORDER_B_ITEM = new CustomItem(Material.LIME_STAINED_GLASS_PANE,""
-            );
+    private static final ItemStack FREE_STATE_ITEM = new CustomItem(Material.BLACK_STAINED_GLASS_PANE,"");
+    private static final ItemStack BORDER_A_ITEM = new CustomItem(Material.LIGHT_BLUE_STAINED_GLASS_PANE,"");
+    private static final ItemStack BORDER_B_ITEM = new CustomItem(Material.LIME_STAINED_GLASS_PANE,"");
     protected final List<MachineRecipe> recipes = new ArrayList<>();
     private final MachineProcessor<CraftingOperation> processor = new MachineProcessor<>(this);
     public SaAtomMachineAB(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
