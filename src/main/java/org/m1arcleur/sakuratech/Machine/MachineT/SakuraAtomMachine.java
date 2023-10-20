@@ -19,17 +19,12 @@ import java.util.List;
  * @website github.com/snugbrick;
  */
 public class SakuraAtomMachine extends MultiBlockMachine implements RecipeDisplayItem {
-    private static List<ItemStack> itemStackList;
 
     protected SakuraAtomMachine(ItemGroup itemGroup, SlimefunItemStack item, ItemStack[] recipe, ItemStack[] machineRecipes, BlockFace trigger) {
         super(itemGroup, item, recipe, machineRecipes, trigger);
     }
 
-    @Nonnull
-    public List<ItemStack> getDisplayRecipes() {
 
-        return itemStackList;
-    }
 
     @Override
     public void onInteract(Player player, Block block) {
