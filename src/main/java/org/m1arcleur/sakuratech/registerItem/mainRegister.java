@@ -1,6 +1,5 @@
 package org.m1arcleur.sakuratech.registerItem;
 
-import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.api.researches.Research;
@@ -8,12 +7,10 @@ import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
 import org.bukkit.Location;
 import org.bukkit.NamespacedKey;
 import org.m1arcleur.sakuratech.SakuraTech;
-import org.m1arcleur.sakuratech.regiaterGroup.mainGroup;
+import org.m1arcleur.sakuratech.registerGroup.mainGroup;
 import org.m1arcleur.sakuratech.registerItem.ItemSakura.sakuraAtom;
 import org.m1arcleur.sakuratech.registerItem.ItemSakura.sakuraAtomIngot;
 import org.m1arcleur.sakuratech.registerItem.notMainItem.DeathAtom;
-
-import java.util.Locale;
 
 /**
  * @author MiracleUR
@@ -49,6 +46,12 @@ public class mainRegister {
         research3.register();
     }
     public static void MultiMachineRegister(){
+
+    }
+    public static void MachineRegister(){
+
+    }
+    public static void ResourceRegister(){
 
     }
 }

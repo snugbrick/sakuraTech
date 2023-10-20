@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
  * 1.樱核原子及其生产机器
  * 2.樱花原锭
  * 3.樱花核心
- * */
+ */
 public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
     private static SakuraTech Instance;
 
@@ -23,6 +23,12 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
 
         mainRegister.itemRegister();
         mainRegister.MultiMachineRegister();
+        mainRegister.MachineRegister();
+        mainRegister.ResourceRegister();
+
+        /*
+         * ItemStack IS = CustomItem(SkullItem.fromBase64(),"Name","Lore");
+         * */
 
     }
 

@@ -1,4 +1,4 @@
-package org.m1arcleur.sakuratech.regiaterGroup;
+package org.m1arcleur.sakuratech.registerGroup;
 
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
