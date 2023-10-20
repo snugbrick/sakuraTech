@@ -13,6 +13,9 @@ import org.m1arcleur.sakuratech.SakuraTech;
  */
 public class mainGroup {
     public static ItemGroup
-        itemGroup= new ItemGroup(new NamespacedKey(
-                SakuraTech.getInstance(), "SakuraTech"), new CustomItemStack(Material.CHERRY_LEAVES,"樱花科技"));
+            itemGroup = new ItemGroup(new NamespacedKey(
+            SakuraTech.getInstance(), "SakuraTech"), new CustomItemStack(Material.CHERRY_LEAVES, "樱花科技"));
+    public static ItemGroup
+            MultiItemGroup = new ItemGroup(new NamespacedKey(
+            SakuraTech.getInstance(), "MultiSakuraTech"), new CustomItemStack(Material.CHERRY_WOOD, "多方块结构樱花科技机器"));
 }

@@ -48,4 +48,7 @@ public class mainRegister {
         research3.addItems(SlimefunItem.getByItem(DeathAtom.deathAtom));
         research3.register();
     }
+    public static void MultiMachineRegister(){
+
+    }
 }

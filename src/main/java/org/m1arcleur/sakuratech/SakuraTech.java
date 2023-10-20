@@ -22,6 +22,7 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
         Instance = this;
 
         mainRegister.itemRegister();
+        mainRegister.MultiMachineRegister();
 
     }
 
