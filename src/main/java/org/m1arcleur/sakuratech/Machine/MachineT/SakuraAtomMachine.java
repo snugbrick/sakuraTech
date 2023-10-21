@@ -2,8 +2,8 @@ package org.m1arcleur.sakuratech.Machine.MachineT;
 
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.core.multiblocks.MultiBlockMachine;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
@@ -13,6 +13,7 @@ import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nonnull;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 /**
@@ -20,31 +21,25 @@ import java.util.List;
  * @version 1.0.0 2023.10.20 20:02
  * @website github.com/snugbrick;
  */
-public class SakuraAtomMachine extends MultiBlockMachine
-        /*implements RecipeDisplayItem*/ {
-    private static List<ItemStack> RecList;
-
+public class SakuraAtomMachine extends MultiBlockMachine {
     public SakuraAtomMachine(ItemGroup itemGroup, SlimefunItemStack item) {
-        //   (itemGroup, item, recipe, machineRecipes, trigger)
         super(itemGroup, item, new ItemStack[]{
                 new ItemStack(Material.CHERRY_LEAVES), new ItemStack(Material.CHERRY_LEAVES), new ItemStack(Material.CHERRY_LEAVES),
                 null, new ItemStack(Material.CHERRY_WOOD), null,
-                null, new ItemStack(Material.DISPENSER), null
-        }, new ItemStack[]{
-                new ItemStack(Material.CHERRY_LEAVES), null, null,
-                null, null, null,
-                null, null, null
-        }, BlockFace.DOWN);
+                null, new CustomItemStack(Material.DISPENSER, "Dispenser (Facing up)"), null
+        }, BlockFace.SELF);
     }
-
     @Override
     public void onInteract(Player player, Block block) {
-
+        Block possibleDes = block.getRelative(BlockFace.DOWN);
     }
-/*
+    /*
     @Nonnull
     public List<ItemStack> getDisplayRecipes() {
-        return RecList;
+
+        return this.recipes.stream().map((items) -> {
+            return items[0];
+        }).collect(Collectors.toList());
     }
- */
+    */
 }

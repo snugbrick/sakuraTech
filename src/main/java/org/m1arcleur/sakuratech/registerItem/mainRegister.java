@@ -1,11 +1,15 @@
 package org.m1arcleur.sakuratech.registerItem;
 
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
+import org.bukkit.inventory.ItemStack;
+import org.m1arcleur.sakuratech.Machine.MachineT.SakuraAtomMachine;
 import org.m1arcleur.sakuratech.SakuraTech;
 import org.m1arcleur.sakuratech.registerGroup.mainGroup;
 import org.m1arcleur.sakuratech.registerItem.ItemSakura.sakuraAtom;
@@ -45,13 +49,17 @@ public class mainRegister {
         research3.addItems(SlimefunItem.getByItem(DeathAtom.deathAtom));
         research3.register();
     }
-    public static void MultiMachineRegister(){
+
+    public static void MultiMachineRegister() {
+        SlimefunItemStack slimefunItemStack = new SlimefunItemStack("8005", new ItemStack(Material.CHERRY_LEAVES));
+        new SakuraAtomMachine(mainGroup.MultiItemGroup, slimefunItemStack).register(SakuraTech.getInstance());
+    }
+
+    public static void MachineRegister() {
 
     }
-    public static void MachineRegister(){
 
-    }
-    public static void ResourceRegister(){
+    public static void ResourceRegister() {
 
     }
 }
