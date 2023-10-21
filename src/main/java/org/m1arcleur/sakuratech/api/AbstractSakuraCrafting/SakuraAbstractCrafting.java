@@ -1,4 +1,4 @@
-package org.m1arcleur.sakuratech.Machine.abstractMachine;
+package org.m1arcleur.sakuratech.api.AbstractSakuraCrafting;
 
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
@@ -17,7 +17,6 @@ import org.bukkit.Material;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -35,6 +34,7 @@ import java.util.concurrent.CompletableFuture;
  * @version 1.0.0 2023.10.22 02:49
  * @website github.com/snugbrick;
  */
+// 来源 AbstractCraftingTable
 public abstract class SakuraAbstractCrafting extends MultiBlockMachine {
     @ParametersAreNonnullByDefault
     protected SakuraAbstractCrafting(ItemGroup itemGroup, SlimefunItemStack item, ItemStack[] recipe, BlockFace trigger) {
@@ -43,7 +43,7 @@ public abstract class SakuraAbstractCrafting extends MultiBlockMachine {
 
     @Nonnull
     protected Inventory createVirtualInventory(@Nonnull Inventory inv) {
-        Inventory fakeInv = Bukkit.createInventory((InventoryHolder) null, 9, "Fake Inventory");
+        Inventory fakeInv = Bukkit.createInventory(null, 9, "Fake Inventory");
 
         for (int j = 0; j < inv.getContents().length; ++j) {
             ItemStack stack = inv.getContents()[j];
@@ -107,10 +107,10 @@ public abstract class SakuraAbstractCrafting extends MultiBlockMachine {
     @Nonnull
     private Optional<String> retrieveID(@Nullable ItemStack backpack, int size) {
         if (backpack != null) {
-            Iterator var3 = backpack.getItemMeta().getLore().iterator();
+            Iterator<String> var3 = backpack.getItemMeta().getLore().iterator();
 
             while (var3.hasNext()) {
-                String line = (String) var3.next();
+                String line = var3.next();
                 if (line.startsWith(ChatColors.color("&7ID: ")) && line.contains("#")) {
                     String id = line.replace(ChatColors.color("&7ID: "), "");
                     String[] idSplit = CommonPatterns.HASH.split(id);

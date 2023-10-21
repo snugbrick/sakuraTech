@@ -1,4 +1,4 @@
-package org.m1arcleur.sakuratech.Machine.MachineT;
+package org.m1arcleur.sakuratech.Machine.MultiMachine;
 
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -8,7 +8,7 @@ import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.m1arcleur.sakuratech.Machine.abstractMachine.SakuraAbstractCrafting;
+import org.m1arcleur.sakuratech.api.AbstractSakuraCrafting.SakuraAbstractCrafting;
 
 /**
  * @author MiracleUR

@@ -9,8 +9,8 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
-import org.m1arcleur.sakuratech.Machine.MachineT.SakuraAtomMachine;
-import org.m1arcleur.sakuratech.Machine.MachineT.SakuraCraftingtable;
+import org.m1arcleur.sakuratech.Machine.MultiMachine.SakuraAtomMachine;
+import org.m1arcleur.sakuratech.Machine.MultiMachine.SakuraCraftingtable;
 import org.m1arcleur.sakuratech.SakuraTech;
 import org.m1arcleur.sakuratech.registerGroup.mainGroup;
 import org.m1arcleur.sakuratech.registerItem.ItemSakura.sakuraAtom;
@@ -25,7 +25,7 @@ import org.m1arcleur.sakuratech.registerItem.notMainItem.DeathAtom;
 public class mainRegister {
     public static void itemRegister() {
         URregister.registerItem("SAKURA_ATOM", sakuraAtom.SAKURA_ATOM, mainGroup.itemGroup,
-                RecipeType.COMPRESSOR, sakuraAtom.recipes);
+                RecipeType.ENHANCED_CRAFTING_TABLE, sakuraAtom.recipes);
 
         Research research = new Research(new NamespacedKey(SakuraTech.getInstance(), "SAKURA_ATOM"), 8001,
                 "樱核原子", 10);
