@@ -20,7 +20,8 @@ import java.util.List;
  * @version 1.0.0 2023.10.20 20:02
  * @website github.com/snugbrick;
  */
-public class SakuraAtomMachine extends MultiBlockMachine implements RecipeDisplayItem {
+public class SakuraAtomMachine extends MultiBlockMachine
+        /*implements RecipeDisplayItem*/ {
     private static List<ItemStack> RecList;
 
     public SakuraAtomMachine(ItemGroup itemGroup, SlimefunItemStack item) {
@@ -40,9 +41,10 @@ public class SakuraAtomMachine extends MultiBlockMachine implements RecipeDispla
     public void onInteract(Player player, Block block) {
 
     }
-
+/*
     @Nonnull
     public List<ItemStack> getDisplayRecipes() {
         return RecList;
     }
+ */
 }
