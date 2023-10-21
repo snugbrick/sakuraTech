@@ -93,6 +93,16 @@
             <artifactId>CS-CoreLib</artifactId>
             <version>master-v1.6.1-gd4e3eab-124</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.thebusybiscuit</groupId>
+            <artifactId>Slimefun4</artifactId>
+            <version>master-RC-7-gd683a63-5632</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.thebusybiscuit</groupId>
+            <artifactId>Slimefun4</artifactId>
+            <version>RC-35</version>
+        </dependency>
 
     </dependencies>
 </project>

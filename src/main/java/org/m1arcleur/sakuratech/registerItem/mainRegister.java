@@ -10,6 +10,7 @@ import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.m1arcleur.sakuratech.Machine.MachineT.SakuraAtomMachine;
+import org.m1arcleur.sakuratech.Machine.MachineT.SakuraCraftingtable;
 import org.m1arcleur.sakuratech.SakuraTech;
 import org.m1arcleur.sakuratech.registerGroup.mainGroup;
 import org.m1arcleur.sakuratech.registerItem.ItemSakura.sakuraAtom;
@@ -53,6 +54,9 @@ public class mainRegister {
     public static void MultiMachineRegister() {
         SlimefunItemStack slimefunItemStack = new SlimefunItemStack("8005", new ItemStack(Material.CHERRY_LEAVES));
         new SakuraAtomMachine(mainGroup.MultiItemGroup, slimefunItemStack).register(SakuraTech.getInstance());
+
+        SlimefunItemStack SakuraCrafting = new SlimefunItemStack("8006", new ItemStack(Material.CRAFTING_TABLE));
+        new SakuraCraftingtable(mainGroup.MultiItemGroup, SakuraCrafting).register(SakuraTech.getInstance());
     }
 
     public static void MachineRegister() {
