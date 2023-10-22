@@ -11,7 +11,7 @@ import org.bukkit.inventory.ItemStack;
  */
 public class AtomMachine {
     public static ItemStack itemStacks = new CustomItemStack(
-            Material.CHERRY_WOOD, "樱核原子制锭机", "可以将原子压缩为锭", "16J/s 256J可存储"
+            Material.CHERRY_LOG, "樱核原子制锭机", "可以将原子压缩为锭", "16J/s 256J可存储"
     );
 
     public static ItemStack[] itemRecipe() {

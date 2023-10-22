@@ -1,10 +1,12 @@
 package org.m1arcleur.sakuratech.item;
 
+import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -26,9 +28,11 @@ import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtomIngot;
  */
 public class mainRegister {
     public static void blockMachineRegister() {
-        new atomingotAlternator(mainGroup.itemGroup, "樱核原子制锭机", AtomMachine.itemStacks,
-                RecipeType.ENHANCED_CRAFTING_TABLE, AtomMachine.itemRecipe());
+        assert Slimefun.instance() != null;
+        new atomingotAlternator(mainGroup.itemGroup, "樱核原子铸造机", AtomMachine.itemStacks,
+                RecipeType.ENHANCED_CRAFTING_TABLE, AtomMachine.itemRecipe()).register(Slimefun.instance());
     }
+
     public static void itemRegister() {
         URregister.registerItem("SAKURA_ATOM", sakuraAtom.SAKURA_ATOM, mainGroup.itemGroup,
                 RecipeType.ENHANCED_CRAFTING_TABLE, sakuraAtom.recipes);
@@ -56,6 +60,7 @@ public class mainRegister {
         research3.addItems(SlimefunItem.getByItem(DeathAtom.deathAtom));
         research3.register();
     }
+
     public static void multiMahcineRegister() {
         SlimefunItemStack slimefunItemStack = new SlimefunItemStack("樱花创造机", new ItemStack(Material.CHERRY_LEAVES));
         new SakuraAtomMachine(mainGroup.MultiItemGroup, slimefunItemStack).register(SakuraTech.getInstance());
@@ -63,7 +68,8 @@ public class mainRegister {
         SlimefunItemStack SakuraCrafting = new SlimefunItemStack("樱花合成台", new ItemStack(Material.CRAFTING_TABLE));
         new SakuraCraftingtable(mainGroup.MultiItemGroup, SakuraCrafting).register(SakuraTech.getInstance());
     }
-    public static void resourceRegister(){
+
+    public static void resourceRegister() {
 
     }
 }
