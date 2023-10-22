@@ -1,24 +1,35 @@
 package org.m1arcleur.sakuratech.item;
 
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
+import org.bukkit.inventory.ItemStack;
 import org.m1arcleur.sakuratech.Group.mainGroup;
+import org.m1arcleur.sakuratech.Machine.SakuraAtomMachine;
+import org.m1arcleur.sakuratech.Machine.SakuraCraftingtable;
+import org.m1arcleur.sakuratech.Machine.atomingotAlternator;
 import org.m1arcleur.sakuratech.SakuraTech;
+import org.m1arcleur.sakuratech.item.ItemSakura.AtomMachine;
+import org.m1arcleur.sakuratech.item.ItemSakura.DeathAtom;
 import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtom;
 import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtomIngot;
-import org.m1arcleur.sakuratech.item.notMainItem.DeathAtom;
 
 /**
  * @author MiracleUR
- * @version 1.0.0 2023.10.23 00:00
+ * @version 1.0.0 2023.10.23 00:57
  * @website github.com/snugbrick;
  */
-public class itemRegister {
-    public static void run() {
+public class mainRegister {
+    public static void blockMachineRegister() {
+        new atomingotAlternator(mainGroup.itemGroup, "樱核原子制锭机", AtomMachine.itemStacks,
+                RecipeType.ENHANCED_CRAFTING_TABLE, AtomMachine.itemRecipe());
+    }
+    public static void itemRegister() {
         URregister.registerItem("SAKURA_ATOM", sakuraAtom.SAKURA_ATOM, mainGroup.itemGroup,
                 RecipeType.ENHANCED_CRAFTING_TABLE, sakuraAtom.recipes);
 
@@ -44,5 +55,15 @@ public class itemRegister {
                 "凋亡粒子", 15);
         research3.addItems(SlimefunItem.getByItem(DeathAtom.deathAtom));
         research3.register();
+    }
+    public static void multiMahcineRegister() {
+        SlimefunItemStack slimefunItemStack = new SlimefunItemStack("樱花创造机", new ItemStack(Material.CHERRY_LEAVES));
+        new SakuraAtomMachine(mainGroup.MultiItemGroup, slimefunItemStack).register(SakuraTech.getInstance());
+
+        SlimefunItemStack SakuraCrafting = new SlimefunItemStack("樱花合成台", new ItemStack(Material.CRAFTING_TABLE));
+        new SakuraCraftingtable(mainGroup.MultiItemGroup, SakuraCrafting).register(SakuraTech.getInstance());
+    }
+    public static void resourceRegister(){
+
     }
 }

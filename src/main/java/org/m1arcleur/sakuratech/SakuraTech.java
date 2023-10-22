@@ -21,15 +21,14 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
         // Plugin startup logic
         Instance = this;
 
-        itemRegister.run();
-        multiMahcineRegister.run();
-        blockMachineRegister.run();
-        resourceRegister.run();
+        mainRegister.itemRegister();
+        mainRegister.multiMahcineRegister();
+        mainRegister.resourceRegister();
+        mainRegister.blockMachineRegister();
 
         /*
          * ItemStack IS = CustomItem(SkullItem.fromBase64(),"Name","Lore");
          * */
-
     }
 
     @Override

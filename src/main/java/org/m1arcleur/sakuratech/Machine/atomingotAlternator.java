@@ -1,4 +1,4 @@
-package org.m1arcleur.sakuratech.Machine.SimpleMachine;
+package org.m1arcleur.sakuratech.Machine;
 
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -6,6 +6,7 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.AContainer;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
+import org.m1arcleur.sakuratech.RecipeTypeUR.recipeType;
 import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtom;
 import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtomIngot;
 
@@ -16,13 +17,14 @@ import javax.annotation.Nonnull;
  * @version 1.0.0 2023.10.22 23:17
  * @website github.com/snugbrick;
  */
-public class atomAlternator extends AContainer {
-    protected atomAlternator(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
+public class atomingotAlternator extends AContainer {
+
+    public atomingotAlternator(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
     }
 
-    protected atomAlternator(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, ItemStack recipeOutput) {
-        super(itemGroup, item, recipeType, recipe, recipeOutput);
+    public atomingotAlternator(ItemGroup itemGroup, String id, ItemStack item, RecipeType recipeType, ItemStack[] recipe) {
+        super(itemGroup, new SlimefunItemStack(id, item), recipeType, recipe);
     }
 
     @Override

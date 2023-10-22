@@ -1,13 +1,11 @@
 package org.m1arcleur.sakuratech.RecipeTypeUR;
 
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
-import org.m1arcleur.sakuratech.Machine.MultiMachine.SakuraCraftingtable;
 
 import java.util.Locale;
 
