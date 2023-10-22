@@ -2,7 +2,7 @@ package org.m1arcleur.sakuratech;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.m1arcleur.sakuratech.registerItem.mainRegister;
+import org.m1arcleur.sakuratech.item.mainRegister;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

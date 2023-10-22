@@ -17,7 +17,7 @@ import java.util.Locale;
  * @website github.com/snugbrick;
  */
 public class recipeType extends RecipeType {
-    private static final RecipeType SAKURA_CRAFTING_TABLE;
+    public static final RecipeType SAKURA_CRAFTING_TABLE;
     private final ItemStack item;
     private NamespacedKey key;
     private final String machine;
@@ -37,7 +37,6 @@ public class recipeType extends RecipeType {
             }
         }
     }
-
 
     static {
         SlimefunItemStack slimefunItemStack = new SlimefunItemStack("sakura_crafting_table", Material.CRAFTING_TABLE, "樱花合成台", "可以合成樱花科技物品");

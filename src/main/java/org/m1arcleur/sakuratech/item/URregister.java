@@ -1,4 +1,4 @@
-package org.m1arcleur.sakuratech.registerItem;
+package org.m1arcleur.sakuratech.item;
 
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemHandler;

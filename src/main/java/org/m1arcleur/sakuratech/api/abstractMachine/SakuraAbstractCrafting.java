@@ -1,4 +1,4 @@
-package org.m1arcleur.sakuratech.api.AbstractSakuraCrafting;
+package org.m1arcleur.sakuratech.api.abstractMachine;
 
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;

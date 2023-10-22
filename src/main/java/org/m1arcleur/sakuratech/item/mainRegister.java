@@ -1,4 +1,4 @@
-package org.m1arcleur.sakuratech.registerItem;
+package org.m1arcleur.sakuratech.item;
 
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -12,10 +12,10 @@ import org.bukkit.inventory.ItemStack;
 import org.m1arcleur.sakuratech.Machine.MultiMachine.SakuraAtomMachine;
 import org.m1arcleur.sakuratech.Machine.MultiMachine.SakuraCraftingtable;
 import org.m1arcleur.sakuratech.SakuraTech;
-import org.m1arcleur.sakuratech.registerGroup.mainGroup;
-import org.m1arcleur.sakuratech.registerItem.ItemSakura.sakuraAtom;
-import org.m1arcleur.sakuratech.registerItem.ItemSakura.sakuraAtomIngot;
-import org.m1arcleur.sakuratech.registerItem.notMainItem.DeathAtom;
+import org.m1arcleur.sakuratech.Group.mainGroup;
+import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtom;
+import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtomIngot;
+import org.m1arcleur.sakuratech.item.notMainItem.DeathAtom;
 
 /**
  * @author MiracleUR

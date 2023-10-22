@@ -8,7 +8,7 @@ import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.m1arcleur.sakuratech.api.AbstractSakuraCrafting.SakuraAbstractCrafting;
+import org.m1arcleur.sakuratech.api.abstractMachine.SakuraAbstractCrafting;
 
 /**
  * @author MiracleUR
