@@ -1,29 +1,24 @@
 package org.m1arcleur.sakuratech.item;
 
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
 import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
-import org.bukkit.inventory.ItemStack;
-import org.m1arcleur.sakuratech.Machine.MultiMachine.SakuraAtomMachine;
-import org.m1arcleur.sakuratech.Machine.MultiMachine.SakuraCraftingtable;
-import org.m1arcleur.sakuratech.SakuraTech;
 import org.m1arcleur.sakuratech.Group.mainGroup;
+import org.m1arcleur.sakuratech.SakuraTech;
 import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtom;
 import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtomIngot;
 import org.m1arcleur.sakuratech.item.notMainItem.DeathAtom;
 
 /**
  * @author MiracleUR
- * @version 1.0.0 2023.10.19 21:33
+ * @version 1.0.0 2023.10.23 00:00
  * @website github.com/snugbrick;
  */
-public class mainRegister {
-    public static void itemRegister() {
+public class itemRegister {
+    public static void run() {
         URregister.registerItem("SAKURA_ATOM", sakuraAtom.SAKURA_ATOM, mainGroup.itemGroup,
                 RecipeType.ENHANCED_CRAFTING_TABLE, sakuraAtom.recipes);
 
@@ -49,21 +44,5 @@ public class mainRegister {
                 "凋亡粒子", 15);
         research3.addItems(SlimefunItem.getByItem(DeathAtom.deathAtom));
         research3.register();
-    }
-
-    public static void MultiMachineRegister() {
-        SlimefunItemStack slimefunItemStack = new SlimefunItemStack("8005", new ItemStack(Material.CHERRY_LEAVES));
-        new SakuraAtomMachine(mainGroup.MultiItemGroup, slimefunItemStack).register(SakuraTech.getInstance());
-
-        SlimefunItemStack SakuraCrafting = new SlimefunItemStack("8006", new ItemStack(Material.CRAFTING_TABLE));
-        new SakuraCraftingtable(mainGroup.MultiItemGroup, SakuraCrafting).register(SakuraTech.getInstance());
-    }
-
-    public static void MachineRegister() {
-
-    }
-
-    public static void ResourceRegister() {
-
     }
 }

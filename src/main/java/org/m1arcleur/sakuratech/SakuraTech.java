@@ -2,7 +2,7 @@ package org.m1arcleur.sakuratech;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.m1arcleur.sakuratech.item.mainRegister;
+import org.m1arcleur.sakuratech.item.*;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -21,10 +21,10 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
         // Plugin startup logic
         Instance = this;
 
-        mainRegister.itemRegister();
-        mainRegister.MultiMachineRegister();
-        mainRegister.MachineRegister();
-        mainRegister.ResourceRegister();
+        itemRegister.run();
+        multiMahcineRegister.run();
+        blockMachineRegister.run();
+        resourceRegister.run();
 
         /*
          * ItemStack IS = CustomItem(SkullItem.fromBase64(),"Name","Lore");
