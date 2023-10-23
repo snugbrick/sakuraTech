@@ -1,6 +1,8 @@
 package org.m1arcleur.sakuratech;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
+import org.bukkit.Particle;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.m1arcleur.sakuratech.item.*;
 
@@ -28,6 +30,9 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
 
         /*
          * ItemStack IS = CustomItem(SkullItem.fromBase64(),"Name","Lore");
+         *
+         * Player player = getServer().getPlayer("a");
+         * player.getWorld().spawnParticle(Particle.ASH, player.getLocation(), 0, 0, 0, 0,int speed);
          * */
     }
 

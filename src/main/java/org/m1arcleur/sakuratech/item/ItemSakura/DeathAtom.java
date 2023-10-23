@@ -3,8 +3,6 @@ package org.m1arcleur.sakuratech.item.ItemSakura;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
-import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtom;
-import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtomIngot;
 
 /**
  * @author MiracleUR

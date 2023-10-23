@@ -6,7 +6,6 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.AContainer;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
-import org.m1arcleur.sakuratech.RecipeTypeUR.recipeType;
 import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtom;
 import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtomIngot;
 
