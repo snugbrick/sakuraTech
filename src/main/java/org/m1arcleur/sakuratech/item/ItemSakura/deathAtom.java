@@ -9,7 +9,7 @@ import org.bukkit.inventory.ItemStack;
  * @version 1.0.0 2023.10.20 00:14
  * @website github.com/snugbrick;
  */
-public class DeathAtom {
+public class deathAtom {
     public static ItemStack deathAtom = new CustomItemStack(
             Material.NETHERITE_INGOT, "凋亡粒子", ""
     );

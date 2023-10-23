@@ -9,9 +9,10 @@ import org.bukkit.inventory.ItemStack;
  * @version 1.0.0 2023.10.23 00:18
  * @website github.com/snugbrick;
  */
-public class AtomMachine {
+//铸造机,使用原子和锭以及硬铝锭合成
+public class atomCastingMachine {
     public static ItemStack itemStacks = new CustomItemStack(
-            Material.CHERRY_LOG, "樱核原子制锭机", "可以将原子压缩为锭", "16J/s 256J可存储"
+            Material.CHERRY_LOG, "樱核原子铸造机", "可以将原子压缩为锭", "16J/s 256J可存储"
     );
 
     public static ItemStack[] itemRecipe() {

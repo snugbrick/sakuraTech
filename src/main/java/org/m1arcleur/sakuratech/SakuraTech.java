@@ -1,8 +1,6 @@
 package org.m1arcleur.sakuratech;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import org.bukkit.Particle;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.m1arcleur.sakuratech.item.*;
 
@@ -22,6 +20,13 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
     public void onEnable() {
         // Plugin startup logic
         Instance = this;
+
+        if(getServer().getPluginManager().getPlugin("sakuraTech")!=null){
+            getLogger().info("===sakuraTch===");
+        } else {
+            getLogger().info("无法检测到sakuraTech插件");
+            return;
+        }
 
         mainRegister.itemRegister();
         mainRegister.multiMahcineRegister();

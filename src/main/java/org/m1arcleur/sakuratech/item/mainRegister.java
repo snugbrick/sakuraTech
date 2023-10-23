@@ -6,6 +6,7 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -15,10 +16,7 @@ import org.m1arcleur.sakuratech.Machine.SakuraAtomMachine;
 import org.m1arcleur.sakuratech.Machine.SakuraCraftingtable;
 import org.m1arcleur.sakuratech.Machine.atomingotAlternator;
 import org.m1arcleur.sakuratech.SakuraTech;
-import org.m1arcleur.sakuratech.item.ItemSakura.AtomMachine;
-import org.m1arcleur.sakuratech.item.ItemSakura.DeathAtom;
-import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtom;
-import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtomIngot;
+import org.m1arcleur.sakuratech.item.ItemSakura.*;
 
 /**
  * @author MiracleUR
@@ -28,8 +26,8 @@ import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtomIngot;
 public class mainRegister {
     public static void blockMachineRegister() {
         assert Slimefun.instance() != null;
-        new atomingotAlternator(mainGroup.itemGroup, "樱核原子铸造机", AtomMachine.itemStacks,
-                RecipeType.ENHANCED_CRAFTING_TABLE, AtomMachine.itemRecipe()).register(Slimefun.instance());
+        new atomingotAlternator(mainGroup.itemGroup, "樱核原子铸造机", atomCastingMachine.itemStacks,
+                RecipeType.ENHANCED_CRAFTING_TABLE, atomCastingMachine.itemRecipe()).register(Slimefun.instance());
     }
 
     public static void itemRegister() {
@@ -48,16 +46,25 @@ public class mainRegister {
         research2.addItems(SlimefunItem.getByItem(sakuraAtomIngot.SAKURA_ATOM_INGOT));
         research2.register();
         //==============================================================================================================
-        URregister.registerItem("DEATH_ATOM", DeathAtom.deathAtom, mainGroup.itemGroup,
-                RecipeType.ENHANCED_CRAFTING_TABLE, DeathAtom.recipes, (ItemUseHandler) playerRightClickEvent -> {
-                    if (playerRightClickEvent.getItem().equals(DeathAtom.deathAtom)) {
-                        Location location = playerRightClickEvent.getPlayer().getLocation();
+        URregister.registerItem("DEATH_ATOM", deathAtom.deathAtom, mainGroup.itemGroup,
+                RecipeType.ENHANCED_CRAFTING_TABLE, deathAtom.recipes, (ItemUseHandler) playerRightClickEvent -> {
+                    if (playerRightClickEvent.getItem().equals(deathAtom.deathAtom)) {
+                        playerRightClickEvent.getPlayer().setHealth(0);
+                        //XD
                     }
                 });
         Research research3 = new Research(new NamespacedKey(SakuraTech.getInstance(), "DEATH_ATOM"), 8003,
                 "凋亡粒子", 15);
-        research3.addItems(SlimefunItem.getByItem(DeathAtom.deathAtom));
+        research3.addItems(SlimefunItem.getByItem(deathAtom.deathAtom));
         research3.register();
+        //==============================================================================================================
+/*        URregister.registerItem("POSITION_SHELL", positionShell.IS, mainGroup.itemGroup, RecipeType.ENHANCED_CRAFTING_TABLE,
+                positionShell.recipes);
+        Research research1 = new Research(new NamespacedKey(SakuraTech.getInstance(), "POSITION_SHELL"), 8004,
+                "立场核心", 15);
+        research1.addItems(SlimefunItem.getByItem(positionShell.IS));
+        research1.register();
+*/
     }
 
     public static void multiMahcineRegister() {
