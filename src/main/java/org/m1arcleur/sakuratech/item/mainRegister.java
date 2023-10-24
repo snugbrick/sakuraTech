@@ -6,8 +6,6 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
@@ -17,6 +15,7 @@ import org.m1arcleur.sakuratech.Machine.SakuraCraftingtable;
 import org.m1arcleur.sakuratech.Machine.atomingotAlternator;
 import org.m1arcleur.sakuratech.SakuraTech;
 import org.m1arcleur.sakuratech.item.ItemSakura.*;
+import org.m1arcleur.sakuratech.item.machineItem.atomCastingMachine;
 
 /**
  * @author MiracleUR
@@ -26,7 +25,7 @@ import org.m1arcleur.sakuratech.item.ItemSakura.*;
 public class mainRegister {
     public static void blockMachineRegister() {
         assert Slimefun.instance() != null;
-        new atomingotAlternator(mainGroup.itemGroup, "樱核原子铸造机", atomCastingMachine.itemStacks,
+        new atomingotAlternator(mainGroup.MachineGroup, "樱核原子铸造机", atomCastingMachine.itemStacks,
                 RecipeType.ENHANCED_CRAFTING_TABLE, atomCastingMachine.itemRecipe()).register(Slimefun.instance());
     }
 
@@ -58,13 +57,13 @@ public class mainRegister {
         research3.addItems(SlimefunItem.getByItem(deathAtom.deathAtom));
         research3.register();
         //==============================================================================================================
-/*        URregister.registerItem("POSITION_SHELL", positionShell.IS, mainGroup.itemGroup, RecipeType.ENHANCED_CRAFTING_TABLE,
-                positionShell.recipes);
+        URregister.registerItem("POSITION_SHELL", forceFieldShell.IS, mainGroup.itemGroup, RecipeType.ENHANCED_CRAFTING_TABLE,
+                forceFieldShell.recipes);
         Research research1 = new Research(new NamespacedKey(SakuraTech.getInstance(), "POSITION_SHELL"), 8004,
-                "立场核心", 15);
-        research1.addItems(SlimefunItem.getByItem(positionShell.IS));
+                "力场核心", 15);
+        research1.addItems(SlimefunItem.getByItem(forceFieldShell.IS));
         research1.register();
-*/
+
     }
 
     public static void multiMahcineRegister() {
@@ -75,7 +74,4 @@ public class mainRegister {
         new SakuraCraftingtable(mainGroup.MultiItemGroup, SakuraCrafting).register(SakuraTech.getInstance());
     }
 
-    public static void resourceRegister() {
-
-    }
 }

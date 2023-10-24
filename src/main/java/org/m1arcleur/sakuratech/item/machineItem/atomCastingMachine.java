@@ -1,8 +1,10 @@
-package org.m1arcleur.sakuratech.item.ItemSakura;
+package org.m1arcleur.sakuratech.item.machineItem;
 
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
+import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtom;
+import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtomIngot;
 
 /**
  * @author MiracleUR
@@ -12,7 +14,7 @@ import org.bukkit.inventory.ItemStack;
 //铸造机,使用原子和锭以及硬铝锭合成
 public class atomCastingMachine {
     public static ItemStack itemStacks = new CustomItemStack(
-            Material.CHERRY_LOG, "樱核原子铸造机", "可以将原子压缩为锭", "16J/s 256J可存储"
+            Material.PINK_STAINED_GLASS, "樱核原子铸造机", "可以将原子压缩为锭", "16J/s 256J可存储"
     );
 
     public static ItemStack[] itemRecipe() {

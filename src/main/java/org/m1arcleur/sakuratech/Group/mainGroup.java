@@ -17,5 +17,8 @@ public class mainGroup {
             SakuraTech.getInstance(), "SakuraTech"), new CustomItemStack(Material.CHERRY_LEAVES, "樱花科技"));
     public static ItemGroup
             MultiItemGroup = new ItemGroup(new NamespacedKey(
-            SakuraTech.getInstance(), "MultiSakuraTech"), new CustomItemStack(Material.CHERRY_WOOD, "多方块结构樱花科技机器"));
+            SakuraTech.getInstance(), "MultiSakuraTech"), new CustomItemStack(Material.CHERRY_WOOD,
+            "多方块樱花科技机器"));
+    public static ItemGroup MachineGroup = new ItemGroup(new NamespacedKey(SakuraTech.getInstance(), "SakuraMachine"),
+            new CustomItemStack(Material.PINK_STAINED_GLASS, "樱花科技机器"));
 }

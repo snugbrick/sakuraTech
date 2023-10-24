@@ -18,7 +18,6 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
         Instance = this;
 
         if(getServer().getPluginManager().getPlugin("sakuraTech")!=null){
@@ -28,10 +27,10 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
             return;
         }
 
-        mainRegister.itemRegister();
         mainRegister.multiMahcineRegister();
-        mainRegister.resourceRegister();
         mainRegister.blockMachineRegister();
+        mainRegister.itemRegister();
+        mainRegister.resourceRegister();
 
         /*
          * ItemStack IS = CustomItem(SkullItem.fromBase64(),"Name","Lore");
@@ -43,7 +42,6 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
         Instance = null;
     }
 
