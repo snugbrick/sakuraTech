@@ -11,7 +11,7 @@ import org.bukkit.inventory.ItemStack;
  */
 //力场外壳，使用原子加上锭可以在铸造机中获得
 public class forceFieldShell {
-    public static ItemStack IS = new CustomItemStack(SkullItem.fromBase64("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWY0YzQ2NWJmMzI0YWMxY2YyZGYzNjJmOWJmMTg4ODc1NzY1MTA1NzYwZGFmOGU2MGJkYmE4YjI0YTBiYjcyMiJ9fX0="),
+    public static ItemStack IS = new CustomItemStack(SkullItem.fromURL("https://textures.minecraft.net/texture/e424a686b1c248e71a39201322a70d42cf5edd1e3afe7cdc5f6fee085fb2bcc0"),
             "力场外壳", "与力场核心一起组成各种各样的力场装置");
     public static ItemStack[] recipes = {
             null, sakuraAtom.SAKURA_ATOM, null,
