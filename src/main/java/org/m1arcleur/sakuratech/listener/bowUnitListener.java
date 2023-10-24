@@ -9,7 +9,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 import org.m1arcleur.sakuratech.api.events.bowForcePutEvent;
 import org.m1arcleur.sakuratech.item.forceUnit.bowForceUnit;
@@ -21,7 +20,7 @@ import org.m1arcleur.sakuratech.item.forceUnit.bowForceUnit;
  */
 public class bowUnitListener implements Listener {
     @EventHandler(priority = EventPriority.HIGH)
-    public static void PlayerPutListener(BlockPlaceEvent e) {
+    public void PlayerPutListener(BlockPlaceEvent e) {
         if (!e.isCancelled()) {
             Player player = e.getPlayer();
             String playerName = player.getName();

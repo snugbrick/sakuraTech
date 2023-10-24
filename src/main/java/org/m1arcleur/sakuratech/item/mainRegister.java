@@ -13,6 +13,7 @@ import org.m1arcleur.sakuratech.Group.mainGroup;
 import org.m1arcleur.sakuratech.Machine.SakuraAtomMachine;
 import org.m1arcleur.sakuratech.Machine.SakuraCraftingtable;
 import org.m1arcleur.sakuratech.Machine.atomingotAlternator;
+import org.m1arcleur.sakuratech.RecipeTypeUR.recipeType;
 import org.m1arcleur.sakuratech.SakuraTech;
 import org.m1arcleur.sakuratech.item.ItemSakura.*;
 import org.m1arcleur.sakuratech.item.machineItem.atomCastingMachine;
@@ -23,6 +24,8 @@ import org.m1arcleur.sakuratech.item.machineItem.atomCastingMachine;
  * @website github.com/snugbrick;
  */
 public class mainRegister {
+    private static SlimefunItemStack SakuraCrafting;
+
     public static void blockMachineRegister() {
         assert Slimefun.instance() != null;
         new atomingotAlternator(mainGroup.MachineGroup, "樱核原子铸造机", atomCastingMachine.itemStacks,
@@ -31,8 +34,7 @@ public class mainRegister {
 
     public static void itemRegister() {
         URregister.registerItem("SAKURA_ATOM", sakuraAtom.SAKURA_ATOM, mainGroup.itemGroup,
-                RecipeType.ENHANCED_CRAFTING_TABLE, sakuraAtom.recipes);
-
+                recipeType.SAKURA_CRAFTING_TABLE, sakuraAtom.recipes);
         Research research = new Research(new NamespacedKey(SakuraTech.getInstance(), "SAKURA_ATOM"), 8001,
                 "樱核原子", 10);
         research.addItems(SlimefunItem.getByItem(sakuraAtom.SAKURA_ATOM));
@@ -70,8 +72,11 @@ public class mainRegister {
         SlimefunItemStack slimefunItemStack = new SlimefunItemStack("樱花创造机", new ItemStack(Material.CHERRY_LEAVES));
         new SakuraAtomMachine(mainGroup.MultiItemGroup, slimefunItemStack).register(SakuraTech.getInstance());
 
-        SlimefunItemStack SakuraCrafting = new SlimefunItemStack("樱花合成台", new ItemStack(Material.CRAFTING_TABLE));
+        SakuraCrafting = new SlimefunItemStack("樱花合成台", new ItemStack(Material.CRAFTING_TABLE));
         new SakuraCraftingtable(mainGroup.MultiItemGroup, SakuraCrafting).register(SakuraTech.getInstance());
     }
 
+    public static SlimefunItemStack getSakuraCrafting() {
+        return SakuraCrafting;
+    }
 }

@@ -3,6 +3,7 @@ package org.m1arcleur.sakuratech;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.m1arcleur.sakuratech.item.*;
+import org.m1arcleur.sakuratech.listener.bowUnitListener;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -13,6 +14,7 @@ import javax.annotation.Nullable;
  * 2.樱花原锭
  * 3.樱花核心
  */
+//要接着做的:将樱核原子装配到樱花工作台上
 public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
     private static SakuraTech Instance;
 
@@ -20,7 +22,7 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
     public void onEnable() {
         Instance = this;
 
-        if(getServer().getPluginManager().getPlugin("sakuraTech")!=null){
+        if (getServer().getPluginManager().getPlugin("sakuraTech") != null) {
             getLogger().info("===sakuraTch===");
         } else {
             getLogger().info("无法检测到sakuraTech插件");
@@ -30,7 +32,6 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
         mainRegister.multiMahcineRegister();
         mainRegister.blockMachineRegister();
         mainRegister.itemRegister();
-        mainRegister.resourceRegister();
 
         /*
          * ItemStack IS = CustomItem(SkullItem.fromBase64(),"Name","Lore");
@@ -38,6 +39,10 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
          * Player player = getServer().getPlayer("a");
          * player.getWorld().spawnParticle(Particle.ASH, player.getLocation(), 0, 0, 0, 0,int speed);
          * */
+    }
+
+    public void listenerRgister() {
+        getServer().getPluginManager().registerEvents(new bowUnitListener(), this);
     }
 
     @Override
