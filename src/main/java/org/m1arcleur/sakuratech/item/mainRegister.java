@@ -12,7 +12,7 @@ import org.bukkit.inventory.ItemStack;
 import org.m1arcleur.sakuratech.Group.mainGroup;
 import org.m1arcleur.sakuratech.Machine.SakuraAtomMachine;
 import org.m1arcleur.sakuratech.Machine.SakuraCraftingtable;
-import org.m1arcleur.sakuratech.Machine.atomingotAlternator;
+import org.m1arcleur.sakuratech.Machine.atomingotCastingMachine;
 import org.m1arcleur.sakuratech.RecipeTypeUR.recipeType;
 import org.m1arcleur.sakuratech.SakuraTech;
 import org.m1arcleur.sakuratech.item.ItemSakura.*;
@@ -24,11 +24,12 @@ import org.m1arcleur.sakuratech.item.machineItem.atomCastingMachine;
  * @website github.com/snugbrick;
  */
 public class mainRegister {
-    private static SlimefunItemStack SakuraCrafting;
+    private static final SlimefunItemStack SakuraCrafting = new SlimefunItemStack("樱花合成台", new ItemStack(Material.CRAFTING_TABLE),"樱花合成台");
+    ;
 
     public static void blockMachineRegister() {
         assert Slimefun.instance() != null;
-        new atomingotAlternator(mainGroup.MachineGroup, "樱核原子铸造机", atomCastingMachine.itemStacks,
+        new atomingotCastingMachine(mainGroup.MachineGroup, "樱核原子铸造机", atomCastingMachine.itemStacks,
                 RecipeType.ENHANCED_CRAFTING_TABLE, atomCastingMachine.itemRecipe()).register(Slimefun.instance());
     }
 
@@ -72,7 +73,6 @@ public class mainRegister {
         SlimefunItemStack slimefunItemStack = new SlimefunItemStack("樱花创造机", new ItemStack(Material.CHERRY_LEAVES));
         new SakuraAtomMachine(mainGroup.MultiItemGroup, slimefunItemStack).register(SakuraTech.getInstance());
 
-        SakuraCrafting = new SlimefunItemStack("樱花合成台", new ItemStack(Material.CRAFTING_TABLE));
         new SakuraCraftingtable(mainGroup.MultiItemGroup, SakuraCrafting).register(SakuraTech.getInstance());
     }
 

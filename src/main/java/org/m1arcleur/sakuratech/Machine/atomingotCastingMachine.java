@@ -16,13 +16,13 @@ import javax.annotation.Nonnull;
  * @version 1.0.0 2023.10.22 23:17
  * @website github.com/snugbrick;
  */
-public class atomingotAlternator extends AContainer {
+public class atomingotCastingMachine extends AContainer {
 
-    public atomingotAlternator(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
+    public atomingotCastingMachine(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
     }
 
-    public atomingotAlternator(ItemGroup itemGroup, String id, ItemStack item, RecipeType recipeType, ItemStack[] recipe) {
+    public atomingotCastingMachine(ItemGroup itemGroup, String id, ItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, new SlimefunItemStack(id, item), recipeType, recipe);
     }
 
