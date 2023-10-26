@@ -3,7 +3,6 @@ package org.m1arcleur.sakuratech.RecipeTypeUR;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import org.bukkit.NamespacedKey;
-import org.m1arcleur.sakuratech.Machine.SakuraCraftingtable;
 import org.m1arcleur.sakuratech.SakuraTech;
 import org.m1arcleur.sakuratech.item.mainRegister;
 

@@ -12,7 +12,7 @@ import org.bukkit.inventory.ItemStack;
 import org.m1arcleur.sakuratech.Group.mainGroup;
 import org.m1arcleur.sakuratech.Machine.SakuraAtomMachine;
 import org.m1arcleur.sakuratech.Machine.SakuraCraftingtable;
-import org.m1arcleur.sakuratech.Machine.atomingotCastingMachine;
+import org.m1arcleur.sakuratech.Machine.atomIngotCastingMachine;
 import org.m1arcleur.sakuratech.RecipeTypeUR.recipeType;
 import org.m1arcleur.sakuratech.SakuraTech;
 import org.m1arcleur.sakuratech.item.ItemSakura.*;
@@ -29,7 +29,7 @@ public class mainRegister {
 
     public static void blockMachineRegister() {
         assert Slimefun.instance() != null;
-        new atomingotCastingMachine(mainGroup.MachineGroup, "樱核原子铸造机", atomCastingMachine.itemStacks,
+        new atomIngotCastingMachine(mainGroup.MachineGroup, "樱核原子铸造机", atomCastingMachine.itemStacks,
                 RecipeType.ENHANCED_CRAFTING_TABLE, atomCastingMachine.itemRecipe()).register(Slimefun.instance());
     }
 

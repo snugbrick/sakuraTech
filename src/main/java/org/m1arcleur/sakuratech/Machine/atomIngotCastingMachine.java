@@ -6,6 +6,7 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.AContainer;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
+import org.m1arcleur.sakuratech.api.Interface.timeChangeable;
 import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtom;
 import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtomIngot;
 
@@ -16,13 +17,14 @@ import javax.annotation.Nonnull;
  * @version 1.0.0 2023.10.22 23:17
  * @website github.com/snugbrick;
  */
-public class atomingotCastingMachine extends AContainer {
+public class atomIngotCastingMachine extends AContainer implements timeChangeable {
+    private static int speed = 5;
 
-    public atomingotCastingMachine(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
+    public atomIngotCastingMachine(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
     }
 
-    public atomingotCastingMachine(ItemGroup itemGroup, String id, ItemStack item, RecipeType recipeType, ItemStack[] recipe) {
+    public atomIngotCastingMachine(ItemGroup itemGroup, String id, ItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, new SlimefunItemStack(id, item), recipeType, recipe);
     }
 
@@ -45,7 +47,7 @@ public class atomingotCastingMachine extends AContainer {
 
     @Override
     public int getSpeed() {
-        return 5;
+        return speed;
     }
 
     @Override
@@ -57,5 +59,16 @@ public class atomingotCastingMachine extends AContainer {
     public int getCapacity() {
         //可储存能量
         return 256;
+    }
+
+    @Override
+    public void setTime(int time) {
+        //可以设置时间
+        speed = time;
+    }
+
+    @Override
+    public int getTime() {
+        return speed;
     }
 }
