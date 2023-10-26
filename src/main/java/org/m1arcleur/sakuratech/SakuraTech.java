@@ -1,17 +1,8 @@
 package org.m1arcleur.sakuratech;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.multiblocks.MultiBlockMachine;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import me.mrCookieSlime.CSCoreLibPlugin.cscorelib2.skull.SkullItem;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.m1arcleur.sakuratech.Group.mainGroup;
-import org.m1arcleur.sakuratech.Machine.SakuraCraftingtable;
 import org.m1arcleur.sakuratech.item.*;
-import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtom;
-import org.m1arcleur.sakuratech.listener.bowUnitListener;
 import org.m1arcleur.sakuratech.listener.notPlaceable;
 
 import javax.annotation.Nonnull;
@@ -23,7 +14,7 @@ import javax.annotation.Nullable;
  * 2.樱花原锭
  * 3.樱花核心
  */
-//要接着做的:将樱核原子装配到樱花工作台上,并且把头颅皮肤从base64改成url
+//要接着做的:使樱花工作台返回的是SLimefunItemStack,并且把头颅皮肤从base64改成url
 public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
     private static SakuraTech Instance;
 
@@ -41,11 +32,9 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
 
         mainRegister.multiMahcineRegister();
         mainRegister.blockMachineRegister();
-
-        listenerRgister();
-
         mainRegister.itemRegister();
 
+        listenerRgister();
         /*
         ItemStack IS = new CustomItemStack(SkullItem.fromURL("(http://textures.minecraft.net/texture/e424a686b1c248e71a39201322a70d42cf5edd1e3afe7cdc5f6fee085fb2bcc0"),
                 "Name","Lore");

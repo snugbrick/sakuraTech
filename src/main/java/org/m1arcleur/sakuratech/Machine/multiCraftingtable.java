@@ -10,7 +10,6 @@ import io.github.thebusybiscuit.slimefun4.implementation.items.backpacks.Slimefu
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.ItemUtils;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
@@ -20,6 +19,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.m1arcleur.sakuratech.api.abstractMachine.SakuraAbstractCrafting;
 import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtom;
+import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtomIngot;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
@@ -31,10 +31,10 @@ import java.util.List;
  * @version 1.0.0 2023.10.22 02:46
  * @website github.com/snugbrick;
  */
-public class SakuraCraftingtable extends SakuraAbstractCrafting {
+public class multiCraftingtable extends SakuraAbstractCrafting {
     private static List<ItemStack[]> recipes = new ArrayList<>();
 
-    public SakuraCraftingtable(ItemGroup itemGroup, SlimefunItemStack item) {
+    public multiCraftingtable(ItemGroup itemGroup, SlimefunItemStack item) {
         super(itemGroup, item, new ItemStack[]{
                 null, new ItemStack(Material.CHERRY_LEAVES), null,
                 null, new ItemStack(Material.CRAFTING_TABLE), null,
@@ -45,21 +45,25 @@ public class SakuraCraftingtable extends SakuraAbstractCrafting {
     @Nonnull
     @Override
     public List<ItemStack[]> getRecipes() {
+        //在这里给机器注册物品，0以及偶数是输入物品，奇数是输出物品
+        ItemStack[] SAKURA_ATOM1 = sakuraAtom.recipes;
 
-        ItemStack[] recipe1 = new ItemStack[]{
-                new ItemStack(Material.CHERRY_LEAVES), new ItemStack(Material.CHERRY_LEAVES), new ItemStack(Material.CHERRY_LEAVES),
-                new ItemStack(Material.CHERRY_LEAVES), new ItemStack(Material.CHERRY_LEAVES), new ItemStack(Material.CHERRY_LEAVES),
-                new ItemStack(Material.CHERRY_LEAVES), new ItemStack(Material.CHERRY_LEAVES), new ItemStack(Material.CHERRY_LEAVES)
-        };
+        ItemStack[] SAKURA_ATOM2 = new ItemStack[]{
+                sakuraAtom.SAKURA_ATOM
+        };//樱核原子
 
-        ItemStack[] recipe2 = new ItemStack[]{
-                sakuraAtom.SAKURA_ATOM, null, null,
-                null, null, null,
-                null, null, null
-        };
 
-        recipes.add(recipe1);
-        recipes.add(recipe2);
+        ItemStack[] SAKURA_ATOM_INGOT1 = sakuraAtomIngot.recipes;
+        ItemStack[] SAKURA_ATOM_INGOT2 = new ItemStack[]{
+                sakuraAtomIngot.SAKURA_ATOM_INGOT
+        };//樱花锭
+
+
+        recipes.add(SAKURA_ATOM1);
+        recipes.add(SAKURA_ATOM2);
+
+        recipes.add(SAKURA_ATOM_INGOT1);
+        recipes.add(SAKURA_ATOM_INGOT2);
         return recipes;
     }
 
@@ -80,9 +84,6 @@ public class SakuraCraftingtable extends SakuraAbstractCrafting {
                     if (SlimefunUtils.canPlayerUseItem(player, output, true)) {
                         this.craft(inventory, possibleDes, player, block, output);
                     }
-                    return;
-                } else {
-                    player.sendMessage("无法合成，请保证配方正确");
                     return;
                 }
             }
@@ -114,8 +115,8 @@ public class SakuraCraftingtable extends SakuraAbstractCrafting {
 
     }
 
-    private boolean isCraftable(Inventory inv, ItemStack[] recipe) {
-        for (int j = 0; j < inv.getContents().length; ++j) {
+    private boolean isCraftable(Inventory inv, ItemStack[] recipe) {//9，recipe
+        for (int j = 0; j < inv.getContents().length; ++j) {//将发射器同位与配方比较
             if (!SlimefunUtils.isItemSimilar(inv.getContents()[j], recipe[j], true, true, false)) {
                 if (!(SlimefunItem.getByItem(recipe[j]) instanceof SlimefunBackpack)) {
                     return false;

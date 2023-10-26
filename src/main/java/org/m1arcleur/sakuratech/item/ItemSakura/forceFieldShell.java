@@ -2,6 +2,7 @@ package org.m1arcleur.sakuratech.item.ItemSakura;
 
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import me.mrCookieSlime.CSCoreLibPlugin.cscorelib2.skull.SkullItem;
+import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 /**
@@ -11,7 +12,7 @@ import org.bukkit.inventory.ItemStack;
  */
 //力场外壳，使用原子加上锭可以在铸造机中获得
 public class forceFieldShell {
-    public static ItemStack IS = new CustomItemStack(SkullItem.fromURL("https://textures.minecraft.net/texture/e424a686b1c248e71a39201322a70d42cf5edd1e3afe7cdc5f6fee085fb2bcc0"),
+    public static ItemStack FFS = new CustomItemStack(Material.CHERRY_LOG,
             "力场外壳", "与力场核心一起组成各种各样的力场装置");
     public static ItemStack[] recipes = {
             null, sakuraAtom.SAKURA_ATOM, null,

@@ -14,8 +14,8 @@ import org.bukkit.event.block.BlockPlaceEvent;
 public class notPlaceable implements Listener {
     @EventHandler(priority = EventPriority.HIGHEST)
     public static void notPlaceableItem(BlockPlaceEvent event) {
-        if(BlockStorage.checkID(event.getBlock()).equals("SAKURA_ATOM")){
-            event.setCancelled(true);
-        }
+        //if(BlockStorage.checkID(event.getBlock()).equals("SAKURA_ATOM")){
+            //event.setCancelled(true);
+        //}
     }
 }

@@ -17,5 +17,4 @@ public class sakuraAtomIngot  {
             sakuraAtom.SAKURA_ATOM, new ItemStack(Material.GOLD_INGOT), sakuraAtom.SAKURA_ATOM,
             sakuraAtom.SAKURA_ATOM, sakuraAtom.SAKURA_ATOM, sakuraAtom.SAKURA_ATOM
     };
-
 }

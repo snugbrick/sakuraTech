@@ -16,8 +16,8 @@ import org.bukkit.inventory.ItemStack;
  * @version 1.0.0 2023.10.20 20:02
  * @website github.com/snugbrick;
  */
-public class SakuraAtomMachine extends MultiBlockMachine {
-    public SakuraAtomMachine(ItemGroup itemGroup, SlimefunItemStack item) {
+public class multiAtomMachine extends MultiBlockMachine {
+    public multiAtomMachine(ItemGroup itemGroup, SlimefunItemStack item) {
         super(itemGroup, item, new ItemStack[]{
                 new ItemStack(Material.CHERRY_LEAVES), new ItemStack(Material.CHERRY_LEAVES), new ItemStack(Material.CHERRY_LEAVES),
                 null, new ItemStack(Material.CHERRY_WOOD), null,
@@ -29,6 +29,7 @@ public class SakuraAtomMachine extends MultiBlockMachine {
         Block possibleDes = block.getRelative(BlockFace.DOWN);
     }
     /*
+    //获取第一位物品并处理
     @Nonnull
     public List<ItemStack> getDisplayRecipes() {
 
