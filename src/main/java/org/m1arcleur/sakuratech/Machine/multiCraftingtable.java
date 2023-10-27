@@ -18,6 +18,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.m1arcleur.sakuratech.api.abstractMachine.SakuraAbstractCrafting;
+import org.m1arcleur.sakuratech.item.ItemSakura.forceFieldShell;
+import org.m1arcleur.sakuratech.item.ItemSakura.multiForceCore;
 import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtom;
 import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtomIngot;
 
@@ -40,31 +42,6 @@ public class multiCraftingtable extends SakuraAbstractCrafting {
                 null, new ItemStack(Material.CRAFTING_TABLE), null,
                 null, new CustomItemStack(Material.DISPENSER, "Dispenser (Facing up)"), null
         }, BlockFace.SELF);
-    }
-
-    @Nonnull
-    @Override
-    public List<ItemStack[]> getRecipes() {
-        //在这里给机器注册物品，0以及偶数是输入物品，奇数是输出物品
-        ItemStack[] SAKURA_ATOM1 = sakuraAtom.recipes;
-
-        ItemStack[] SAKURA_ATOM2 = new ItemStack[]{
-                sakuraAtom.SAKURA_ATOM
-        };//樱核原子
-
-
-        ItemStack[] SAKURA_ATOM_INGOT1 = sakuraAtomIngot.recipes;
-        ItemStack[] SAKURA_ATOM_INGOT2 = new ItemStack[]{
-                sakuraAtomIngot.SAKURA_ATOM_INGOT
-        };//樱花锭
-
-
-        recipes.add(SAKURA_ATOM1);
-        recipes.add(SAKURA_ATOM2);
-
-        recipes.add(SAKURA_ATOM_INGOT1);
-        recipes.add(SAKURA_ATOM_INGOT2);
-        return recipes;
     }
 
     @Override
@@ -129,5 +106,41 @@ public class multiCraftingtable extends SakuraAbstractCrafting {
         }
 
         return true;
+    }
+
+    @Nonnull
+    @Override
+    public List<ItemStack[]> getRecipes() {
+        //在这里给机器注册物品，0以及偶数是输入物品，奇数是输出物品
+        ItemStack[] SAKURA_ATOM1 = sakuraAtom.recipes;
+
+        ItemStack[] SAKURA_ATOM2 = new ItemStack[]{
+                sakuraAtom.SAKURA_ATOM
+        };//樱核原子
+        recipes.add(SAKURA_ATOM1);
+        recipes.add(SAKURA_ATOM2);
+
+        ItemStack[] SAKURA_ATOM_INGOT1 = sakuraAtomIngot.recipes;
+        ItemStack[] SAKURA_ATOM_INGOT2 = new ItemStack[]{
+                sakuraAtomIngot.SAKURA_ATOM_INGOT
+        };//樱花锭
+        recipes.add(SAKURA_ATOM_INGOT1);
+        recipes.add(SAKURA_ATOM_INGOT2);
+
+        ItemStack[] forceShell = forceFieldShell.recipes;
+        ItemStack[] forceFieldShell2 = new ItemStack[]{
+                forceFieldShell.FFS
+        };//力场外壳
+        recipes.add(forceShell);
+        recipes.add(forceFieldShell2);
+
+        ItemStack[] forceCore = multiForceCore.recipes;
+        ItemStack[] forceCore2 = new ItemStack[]{
+                multiForceCore.multiForceCore
+        };//力场核心
+        recipes.add(forceCore);
+        recipes.add(forceCore2);
+
+        return recipes;
     }
 }

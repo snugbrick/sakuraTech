@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
  * 2.樱花原锭
  * 3.樱花核心
  */
-//要接着做的:使樱花工作台返回的是SLimefunItemStack,并且把头颅皮肤从base64改成url
+//要接着做的:使樱花工作台返回的是SLimefunItemStack,
 public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
     private static SakuraTech Instance;
 
