@@ -35,9 +35,9 @@ import java.util.concurrent.CompletableFuture;
  * @website github.com/snugbrick;
  */
 //AbstractCraftingTable
-public abstract class SakuraAbstractCrafting extends MultiBlockMachine {
+public abstract class AbstractSakuraCrafting extends MultiBlockMachine {
     @ParametersAreNonnullByDefault
-    protected SakuraAbstractCrafting(ItemGroup itemGroup, SlimefunItemStack item, ItemStack[] recipe, BlockFace trigger) {
+    protected AbstractSakuraCrafting(ItemGroup itemGroup, SlimefunItemStack item, ItemStack[] recipe, BlockFace trigger) {
         super(itemGroup, item, recipe, trigger);
     }
 

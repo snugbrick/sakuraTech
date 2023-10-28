@@ -19,4 +19,5 @@ public class multiForceCore {
             sakuraAtomIngot.SAKURA_ATOM_INGOT,forceFieldShell.FFS,sakuraAtomIngot.SAKURA_ATOM_INGOT,
             SlimefunItems.STEEL_INGOT,sakuraAtom.SAKURA_ATOM,SlimefunItems.STEEL_INGOT
     };
+
 }

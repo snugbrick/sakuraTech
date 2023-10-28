@@ -17,7 +17,7 @@ import org.bukkit.block.Dispenser;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import org.m1arcleur.sakuratech.api.abstractMachine.SakuraAbstractCrafting;
+import org.m1arcleur.sakuratech.api.abstractMachine.AbstractSakuraCrafting;
 import org.m1arcleur.sakuratech.item.ItemSakura.forceFieldShell;
 import org.m1arcleur.sakuratech.item.ItemSakura.multiForceCore;
 import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtom;
@@ -33,7 +33,7 @@ import java.util.List;
  * @version 1.0.0 2023.10.22 02:46
  * @website github.com/snugbrick;
  */
-public class multiCraftingtable extends SakuraAbstractCrafting {
+public class multiCraftingtable extends AbstractSakuraCrafting {
     private static List<ItemStack[]> recipes = new ArrayList<>();
 
     public multiCraftingtable(ItemGroup itemGroup, SlimefunItemStack item) {

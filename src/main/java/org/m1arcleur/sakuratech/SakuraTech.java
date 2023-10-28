@@ -3,6 +3,7 @@ package org.m1arcleur.sakuratech;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.m1arcleur.sakuratech.item.*;
+import org.m1arcleur.sakuratech.listener.bowUnitListener;
 import org.m1arcleur.sakuratech.listener.notPlaceable;
 
 import javax.annotation.Nonnull;
@@ -48,7 +49,7 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
     }
 
     public void listenerRgister() {
-        //getServer().getPluginManager().registerEvents(new bowUnitListener(), this);
+        getServer().getPluginManager().registerEvents(new bowUnitListener(), this);
         getServer().getPluginManager().registerEvents(new notPlaceable(), this);
 
         getLogger().info("监听器加载完毕");
