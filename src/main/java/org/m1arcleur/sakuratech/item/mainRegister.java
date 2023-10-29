@@ -79,6 +79,9 @@ public class mainRegister {
         research4.register();
 
         Bukkit.getLogger().info("物品加载完毕");
+        //==============================================================================================================
+        URregister.registerItem("bowForceCore", forceCore.abowForceCore, mainGroup.itemGroup, recipeType.SAKURA_CRAFTING_TABLE,
+                forceCore.bowRecipes);
     }
 
     public static void multiMahcineRegister() {
