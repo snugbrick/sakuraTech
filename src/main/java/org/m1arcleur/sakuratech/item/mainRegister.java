@@ -74,14 +74,16 @@ public class mainRegister {
         URregister.registerItem("FORCE_CORE", multiForceCore.multiForceCore, mainGroup.itemGroup, recipeType.SAKURA_CRAFTING_TABLE,
                 multiForceCore.recipes);
         Research research4 = new Research(new NamespacedKey(SakuraTech.getInstance(), "FORCE_CORE"), 8005,
-                "力场核心", 20);
+                "力场核心样板", 20);
         research4.addItems(SlimefunItem.getByItem(multiForceCore.multiForceCore));
         research4.register();
 
         Bukkit.getLogger().info("物品加载完毕");
         //==============================================================================================================
         URregister.registerItem("bowForceCore", forceCore.abowForceCore, mainGroup.itemGroup, recipeType.SAKURA_CRAFTING_TABLE,
-                forceCore.bowRecipes);
+                forceCore.bowRecipes);//弓箭力场核心
+        URregister.registerItem("creatureCore",forceCore.creatureCore,mainGroup.itemGroup,recipeType.SAKURA_CRAFTING_TABLE,
+                forceCore.creatureRecipes);//生物力场核心
     }
 
     public static void multiMahcineRegister() {

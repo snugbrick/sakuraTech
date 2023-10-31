@@ -11,25 +11,28 @@ import org.bukkit.inventory.ItemStack;
  */
 //各种各样的核心，暂时还未开放获取，因为头颅网站无法访问
 public class forceCore {
-    public static ItemStack creatureCore = new CustomItemStack(Material.CHERRY_BOAT,
-            "生物力场核心", "");
+    public static ItemStack creatureCore = new CustomItemStack(Material.CHERRY_BOAT, "生物力场核心", "");
     public static ItemStack[] creatureRecipes = {
             null, null, null,
             null, null, null,
             sakuraAtom.SAKURA_ATOM, null, null
     };
-    public static ItemStack abowForceCore = new CustomItemStack(Material.CHERRY_BOAT,
-            "弓箭力场核心", "");
+    public static ItemStack abowForceCore = new CustomItemStack(Material.CHERRY_BOAT, "弓箭力场核心", "");
     public static ItemStack[] bowRecipes = {
             null, null, null,
             sakuraAtom.SAKURA_ATOM, null, null,
             null, null, null
     };
-    public static ItemStack synthesisForceCore = new CustomItemStack(Material.CHERRY_BOAT,
-            "综合力场核心", "");
+    public static ItemStack synthesisForceCore = new CustomItemStack(Material.CHERRY_BOAT, "综合力场核心", "");
     public static ItemStack[] synthesisRecipes = {
             null, null, null,
             null, null, null,
             null, sakuraAtom.SAKURA_ATOM, null
+    };
+    public static ItemStack reflectForceCore = new CustomItemStack(Material.CHERRY_BOAT, "反射立场核心", "");
+    public static ItemStack[] reflectRecipes = {
+            null, null, null,
+            null, null, null,
+            null, null, sakuraAtom.SAKURA_ATOM
     };
 }

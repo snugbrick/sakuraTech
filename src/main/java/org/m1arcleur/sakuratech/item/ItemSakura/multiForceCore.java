@@ -12,7 +12,7 @@ import org.bukkit.inventory.ItemStack;
  */
 //力场核心
 public class multiForceCore {
-    public static ItemStack multiForceCore = new CustomItemStack(Material.CHERRY_LEAVES, "力场核心",
+    public static ItemStack multiForceCore = new CustomItemStack(Material.CHERRY_LEAVES, "力场核心样板",
             "用这个可以合成各种各样的力场装置哦");
     public static ItemStack[] recipes = {
             SlimefunItems.STEEL_INGOT,sakuraAtom.SAKURA_ATOM,SlimefunItems.STEEL_INGOT,
