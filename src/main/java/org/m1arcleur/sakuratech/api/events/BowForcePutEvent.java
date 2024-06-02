@@ -13,12 +13,12 @@ import javax.annotation.Nonnull;
  * @website github.com/snugbrick;
  */
 //当玩家放置弓箭防御力场时调用
-public class bowForcePutEvent extends Event {
+public class BowForcePutEvent extends Event {
     private static final HandlerList handlers = new HandlerList();
     private final Player player;
     private final ItemStack itemStack;
 
-    public bowForcePutEvent(Player player, ItemStack itemStack) {
+    public BowForcePutEvent(Player player, ItemStack itemStack) {
         this.player = player;
         this.itemStack = itemStack;
     }

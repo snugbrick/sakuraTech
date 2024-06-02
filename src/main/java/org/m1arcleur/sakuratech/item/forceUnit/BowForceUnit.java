@@ -10,7 +10,7 @@ import org.bukkit.inventory.ItemStack;
  * @website github.com/snugbrick;
  */
 //弓箭力场护盾
-public class bowForceUnit {
+public class BowForceUnit {
     //暂时用粉色混凝土代替，我无法访问base64
     public static ItemStack bowForceCore = new CustomItemStack(Material.PINK_CONCRETE, "弓箭力场护盾",
             "抵御来袭的箭矢");
