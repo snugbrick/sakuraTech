@@ -34,7 +34,7 @@ public class mainRegister {
         new atomIngotCastingMachine(mainGroup.MachineGroup, "樱核原子铸造机", atomCastingMachine.itemStacks,
                 RecipeType.ENHANCED_CRAFTING_TABLE, atomCastingMachine.itemRecipe()).register(SakuraTech.getInstance());
 
-        Bukkit.getLogger().info("方块机器加载完毕");
+        Bukkit.getLogger().info("[sakuraTech] 方块机器加载完毕");
     }
 
     public static void itemRegister() {
@@ -77,21 +77,25 @@ public class mainRegister {
                 "力场核心样板", 20);
         research4.addItems(SlimefunItem.getByItem(multiForceCore.multiForceCore));
         research4.register();
-
-        Bukkit.getLogger().info("物品加载完毕");
         //==============================================================================================================
         URregister.registerItem("bowForceCore", forceCore.abowForceCore, mainGroup.itemGroup, recipeType.SAKURA_CRAFTING_TABLE,
                 forceCore.bowRecipes);//弓箭力场核心
-        URregister.registerItem("creatureCore",forceCore.creatureCore,mainGroup.itemGroup,recipeType.SAKURA_CRAFTING_TABLE,
+        URregister.registerItem("creatureCore", forceCore.creatureCore, mainGroup.itemGroup, recipeType.SAKURA_CRAFTING_TABLE,
                 forceCore.creatureRecipes);//生物力场核心
+        URregister.registerItem("synthesisForceCore", forceCore.synthesisForceCore, mainGroup.itemGroup, recipeType.SAKURA_CRAFTING_TABLE,
+                forceCore.synthesisRecipes);//综合力场核心;
+        URregister.registerItem("reflectForceCore", forceCore.reflectForceCore, mainGroup.itemGroup, recipeType.SAKURA_CRAFTING_TABLE,
+                forceCore.reflectRecipes);//反射立场核心
+
+        Bukkit.getLogger().info("[sakuraTech] 物品加载完毕");
     }
 
-    public static void multiMahcineRegister() {
+    public static void multiMachineRegister() {
         new multiAtomMachine(mainGroup.MultiItemGroup, SAKURA_TREE_MACHINE).register(SakuraTech.getInstance());
 
         new multiCraftingtable(mainGroup.MultiItemGroup, SakuraCrafting).register(SakuraTech.getInstance());
 
-        Bukkit.getLogger().info("多方块机器加载完毕");
+        Bukkit.getLogger().info("[sakuraTech] 多方块机器加载完毕");
     }
 
     public static SlimefunItemStack getSakuraCrafting() {
