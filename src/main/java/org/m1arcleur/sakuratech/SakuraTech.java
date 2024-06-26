@@ -16,11 +16,12 @@ import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
  * 2.樱花原锭
  * 3.樱花核心
  */
-/*要接着做的:使樱花工作台返回的是SLimefunItemStack,
-
- * 处理构思：将第二个配方中的物品切换（我估计没用skullItem获取不到url，先咕了
- *
- * */
+/*
+ * 要接着做的:使樱花工作台返回的是SLimefunItemStack,
+ * 
+ * 处理构思：将第二个配方中的物品切换（我估计没用
+ * 
+ */
 public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
     private static SakuraTech Instance;
 
@@ -47,7 +48,7 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
         MainRegister.blockMachineRegister();
         MainRegister.itemRegister();
 
-        listenerRegister();
+        listenerRgister();
 
         getLogger().info("插件已启用");
 
@@ -66,7 +67,7 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
          */
     }
 
-    public void listenerRegister() {
+    public void listenerRgister() {
         getServer().getPluginManager().registerEvents(new BowUnitListener(), this);
         getServer().getPluginManager().registerEvents(new NotPlaceable(), this);
 
