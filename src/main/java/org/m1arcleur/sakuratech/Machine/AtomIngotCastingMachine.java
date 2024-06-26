@@ -6,9 +6,9 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.AContainer;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
-import org.m1arcleur.sakuratech.api.Interface.timeChangeable;
-import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtom;
-import org.m1arcleur.sakuratech.item.ItemSakura.sakuraAtomIngot;
+import org.m1arcleur.sakuratech.api.Interface.TimeChangeable;
+import org.m1arcleur.sakuratech.item.ItemSakura.SakuraAtom;
+import org.m1arcleur.sakuratech.item.ItemSakura.SakuraAtomIngot;
 
 import javax.annotation.Nonnull;
 
@@ -17,15 +17,15 @@ import javax.annotation.Nonnull;
  * @version 1.0.0 2023.10.22 23:17
  * @website github.com/snugbrick;
  */
-public class atomIngotCastingMachine extends AContainer implements timeChangeable {
+public class AtomIngotCastingMachine extends AContainer implements TimeChangeable {
     private static int speed = 5;
 
-    public atomIngotCastingMachine(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
+    public AtomIngotCastingMachine(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
     }
 
-    public atomIngotCastingMachine(ItemGroup itemGroup, String id, ItemStack item, RecipeType recipeType, ItemStack[] recipe) {
-        super(itemGroup, new SlimefunItemStack(id, item), recipeType, recipe);
+    public AtomIngotCastingMachine(ItemGroup itemGroup, String id, ItemStack item, RecipeType recipeType, ItemStack[] recipe) {
+        this(itemGroup, new SlimefunItemStack(id, item), recipeType, recipe);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class atomIngotCastingMachine extends AContainer implements timeChangeabl
     @Override
     public void registerDefaultRecipes() {
         //默认配方
-        this.registerRecipe(5, sakuraAtom.SAKURA_ATOM, sakuraAtomIngot.SAKURA_ATOM_INGOT);
+        this.registerRecipe(5, SakuraAtom.SAKURA_ATOM, SakuraAtomIngot.SAKURA_ATOM_INGOT);
     }
 
     @Override

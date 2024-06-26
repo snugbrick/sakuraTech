@@ -4,9 +4,9 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import org.m1arcleur.sakuratech.item.mainRegister;
-import org.m1arcleur.sakuratech.listener.bowUnitListener;
-import org.m1arcleur.sakuratech.listener.notPlaceable;
+import org.m1arcleur.sakuratech.item.MainRegister;
+import org.m1arcleur.sakuratech.listener.BowUnitListener;
+import org.m1arcleur.sakuratech.listener.NotPlaceable;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 
@@ -16,12 +16,11 @@ import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
  * 2.樱花原锭
  * 3.樱花核心
  */
-/*
- * 要接着做的:使樱花工作台返回的是SLimefunItemStack,
- * 
- * 处理构思：将第二个配方中的物品切换（我估计没用
- * 
- */
+/*要接着做的:使樱花工作台返回的是SLimefunItemStack,
+
+ * 处理构思：将第二个配方中的物品切换（我估计没用skullItem获取不到url，先咕了
+ *
+ * */
 public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
     private static SakuraTech Instance;
 
@@ -44,11 +43,11 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
             getServer().getPluginManager().disablePlugin(this);
         }
 
-        mainRegister.multiMahcineRegister();
-        mainRegister.blockMachineRegister();
-        mainRegister.itemRegister();
+        MainRegister.multiMachineRegister();
+        MainRegister.blockMachineRegister();
+        MainRegister.itemRegister();
 
-        listenerRgister();
+        listenerRegister();
 
         getLogger().info("插件已启用");
 
@@ -67,9 +66,9 @@ public final class SakuraTech extends JavaPlugin implements SlimefunAddon {
          */
     }
 
-    public void listenerRgister() {
-        getServer().getPluginManager().registerEvents(new bowUnitListener(), this);
-        getServer().getPluginManager().registerEvents(new notPlaceable(), this);
+    public void listenerRegister() {
+        getServer().getPluginManager().registerEvents(new BowUnitListener(), this);
+        getServer().getPluginManager().registerEvents(new NotPlaceable(), this);
 
         getLogger().info("监听器加载完毕");
     }

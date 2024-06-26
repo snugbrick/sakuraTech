@@ -11,13 +11,13 @@ import org.bukkit.inventory.ItemStack;
  * @website github.com/snugbrick;
  */
 //力场核心
-public class multiForceCore {
+public class MultiForceCore {
     public static ItemStack multiForceCore = new CustomItemStack(Material.CHERRY_LEAVES, "力场核心样板",
             "用这个可以合成各种各样的力场装置哦");
     public static ItemStack[] recipes = {
-            SlimefunItems.STEEL_INGOT,sakuraAtom.SAKURA_ATOM,SlimefunItems.STEEL_INGOT,
-            sakuraAtomIngot.SAKURA_ATOM_INGOT,forceFieldShell.FFS,sakuraAtomIngot.SAKURA_ATOM_INGOT,
-            SlimefunItems.STEEL_INGOT,sakuraAtom.SAKURA_ATOM,SlimefunItems.STEEL_INGOT
+            SlimefunItems.STEEL_INGOT, SakuraAtom.SAKURA_ATOM,SlimefunItems.STEEL_INGOT,
+            SakuraAtomIngot.SAKURA_ATOM_INGOT, ForceFieldShell.FFS, SakuraAtomIngot.SAKURA_ATOM_INGOT,
+            SlimefunItems.STEEL_INGOT, SakuraAtom.SAKURA_ATOM,SlimefunItems.STEEL_INGOT
     };
 
 }

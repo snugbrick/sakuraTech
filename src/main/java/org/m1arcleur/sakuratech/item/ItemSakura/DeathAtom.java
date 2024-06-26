@@ -9,13 +9,13 @@ import org.bukkit.inventory.ItemStack;
  * @version 1.0.0 2023.10.20 00:14
  * @website github.com/snugbrick;
  */
-public class deathAtom {
+public class DeathAtom {
     public static ItemStack deathAtom = new CustomItemStack(
             Material.NETHERITE_INGOT, "凋亡粒子", ""
     );
     public static ItemStack[] recipes = {
-            null, sakuraAtom.SAKURA_ATOM, null,
-            sakuraAtom.SAKURA_ATOM, sakuraAtomIngot.SAKURA_ATOM_INGOT, sakuraAtom.SAKURA_ATOM,
-            null, sakuraAtom.SAKURA_ATOM, null
+            null, SakuraAtom.SAKURA_ATOM, null,
+            SakuraAtom.SAKURA_ATOM, SakuraAtomIngot.SAKURA_ATOM_INGOT, SakuraAtom.SAKURA_ATOM,
+            null, SakuraAtom.SAKURA_ATOM, null
     };
 }

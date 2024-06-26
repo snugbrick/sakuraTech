@@ -11,7 +11,7 @@ import org.m1arcleur.sakuratech.SakuraTech;
  * @version 1.0.0 2023.10.19 18:15
  * @website github.com/snugbrick;
  */
-public class mainGroup {
+public class MainGroup {
     public static ItemGroup
             itemGroup = new ItemGroup(new NamespacedKey(
             SakuraTech.getInstance(), "SakuraTech"), new CustomItemStack(Material.CHERRY_LEAVES, "樱花科技"));
